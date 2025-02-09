@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  overflow: hidden;
+  color: rgb(2, 2, 2);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.imagem-aluguel {
+  width: 250px;
+  height: 200px;
+}
+
+
+
+.navbar a {
+  font-size: 18px;
+  color: rgb(255, 157, 0);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: color 0.3s; 
+}
+
+.navbar a:hover {
+  color: rgb(68, 45, 3); 
+}
+.navbar a a:hover,
+.navbar a.active{
+  color: #ffffff;
+}
+.cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.cadastro-content {
+  max-width: 600px;
+}
+
+.cadastro-image {
+  width: 600px;
+  height: 600px;
+  float: right;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  margin-top: -450px;
+}
+
+.cadastro-content h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+.cadastro-content p{
+  color: rgb(11, 2, 43);
+  font-size: 19px;
+  margin: 20px 0 40px;
+}
+
+.home-imgHover{
+  top: 0;
+  position: absolute;
+  right: 30px;
+  width: 500px;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+@keyframes showRight{
+  100%{
+    width: 0;
+  }
+}
+.main-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  }
+
+app-formulario {
+  width: 300px; 
+}
+
+
+
+
+

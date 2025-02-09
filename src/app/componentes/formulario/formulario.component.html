@@ -1,0 +1,48 @@
+<app-main></app-main>
+<main>
+    <section class="main-section">
+        <div class="container">
+            <h2>Formulário</h2>
+            <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+              <!-- Campo Nome -->
+              <div>
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" formControlName="nome">
+                @if (formulario.get('nome')?.invalid && formulario.get('nome')?.touched) {
+                  <div>
+                    <small *ngIf="formulario.get('nome')?.errors?.['required']">O nome é obrigatório.</small>
+                    <small *ngIf="formulario.get('nome')?.errors?.['minlength']">O nome deve ter pelo menos 3 caracteres.</small>
+                  </div>
+                }
+              </div>
+          
+              <!-- Campo E-mail -->
+              <div>
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" formControlName="email">
+                @if (formulario.get('email')?.invalid && formulario.get('email')?.touched) {
+                  <div>
+                    <small *ngIf="formulario.get('email')?.errors?.['required']">O e-mail é obrigatório.</small>
+                    <small *ngIf="formulario.get('email')?.errors?.['email']">Insira um e-mail válido.</small>
+                  </div>
+                }
+              </div>
+          
+              <!-- Campo Idade -->
+              <div>
+                <label for="idade">Idade:</label>
+                <input id="idade" type="number" formControlName="idade">
+                @if (formulario.get('idade')?.invalid && formulario.get('idade')?.touched) {
+                  <div>
+                    <small *ngIf="formulario.get('idade')?.errors?.['required']">A idade é obrigatória.</small>
+                    <small *ngIf="formulario.get('idade')?.errors?.['min']">Você deve ter pelo menos 18 anos.</small>
+                  </div>
+                }
+              </div>
+          
+              <!-- Botão de Envio -->
+              <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+            </form>
+          </div>
+    </section>
+</main>
