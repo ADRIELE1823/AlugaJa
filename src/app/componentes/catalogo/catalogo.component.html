@@ -1,0 +1,21 @@
+<div class="catalogo-container">
+    <h1>Catálogo de Imóveis</h1>
+    <p>Aqui estão os imóveis com base nas suas preferências:</p>
+  
+    <!-- Exibe as preferências -->
+    @if (preferencias) {
+      <div>
+        <p><strong>Nome:</strong> {{ preferencias.nome }}</p>
+        <p><strong>E-mail:</strong> {{ preferencias.email }}</p>
+        <p><strong>Telefone:</strong> {{ preferencias.telefone }}</p>
+        <p><strong>Tipo de Imóvel:</strong> {{ preferencias.tipoImovel }}</p>
+        <p><strong>Valor Máximo:</strong> R$ {{ preferencias.valorMaximo }}</p>
+      </div>
+    }
+  
+    <!-- Lista de imóveis (exemplo) -->
+    <div class="imoveis">
+      <h2>Imóveis Disponíveis</h2>
+      <p>Implemente aqui a lista de imóveis filtrados com base nas preferências.</p>
+    </div>
+  </div>

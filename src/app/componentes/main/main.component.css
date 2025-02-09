@@ -1,18 +1,20 @@
+/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-*{
+/* Reset global */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   overflow: hidden;
   color: rgb(2, 2, 2);
 }
 
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,30 +31,25 @@ body{
   height: 200px;
 }
 
-
-
 .navbar a {
   font-size: 18px;
   color: rgb(255, 157, 0);
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: color 0.3s; 
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: rgb(68, 45, 3); 
+  color: rgb(68, 45, 3);
 }
-.navbar a a:hover,
-.navbar a.active{
-  color: #ffffff;
-}
+
 .cadastro {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
-  height: 100vh;
+  height: calc(100vh - 150px); /* Altura ajustada para considerar o navbar */
   background-size: cover;
   background-position: center;
 }
@@ -61,54 +58,93 @@ body{
   max-width: 600px;
 }
 
-.cadastro-image {
-  width: 600px;
-  height: 600px;
-  float: right;
-  margin-left: auto;
-  position: absolute;
-  right: 0;
-  margin-top: -450px;
-}
-
-.cadastro-content h1{
+.cadastro-content h1 {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-
-.cadastro-content p{
+.cadastro-content p {
   color: rgb(11, 2, 43);
   font-size: 19px;
   margin: 20px 0 40px;
 }
 
-.home-imgHover{
-  top: 0;
-  position: absolute;
-  right: 30px;
-  width: 500px;
-  height: 100%;
-  background: transparent;
-  transition: 3s;
-}
-@keyframes showRight{
-  100%{
-    width: 0;
-  }
-}
+/* Contêiner principal */
 .main-container {
-  display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
-  }
-
-app-formulario {
-  width: 300px; 
+  display: flex; /* Ativa o layout flexível */
+  justify-content: space-between; /* Espaçamento entre os elementos */
+  align-items: flex-start; /* Alinha os elementos no topo */
+  padding: 150px 10% 20px; /* Espaçamento superior para evitar sobreposição com o navbar */
+  height: 100vh; /* Altura total da tela */
 }
 
+/* Estilo do formulário */
+.formulario-aluguel {
+  width: 400px; /* Largura fixa para o formulário */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px; /* Adiciona margem superior para separar do navbar */
+}
 
+.formulario-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a66417; /* Cor personalizada para o título */
+  font-size: 24px;
+  font-weight: 700;
+}
 
+.form-group {
+  margin-bottom: 15px;
+}
 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #7d5f05; /* Cor dos rótulos */
+}
 
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555; /* Cor do texto nos campos de entrada */
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff; /* Destaque ao focar */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave ao focar */
+}
+
+.error-message {
+  color: #dc3545; /* Cor das mensagens de erro */
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #9e5b03; /* Cor do botão */
+  color: white; /* Cor do texto do botão */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:disabled {
+  background-color: #ccc; /* Cor do botão desabilitado */
+  cursor: not-allowed;
+}
